@@ -3,7 +3,6 @@ import subprocess
 import optparse
 import re
 
-
 def get_arguments():
 	parser = optparse.OptionParser()
 	parser.add_option("-i", "--interface", dest="interface", help="Le nom de l'interface sur laquelle vous souhaitez modifier l'adresse MAC")
@@ -36,4 +35,4 @@ def get_current_mac(interface):
 options = get_arguments()
 current_mac = get_current_mac(options.interface)
 print("Adresse MAC actuelle : " + str(current_mac))
-#change_mac(options.interface, options.new_mac)
+change_mac(options.interface, options.new_mac)
